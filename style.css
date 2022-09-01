@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+}
+body{
+    background-color: floralwhite;
+}
+
+.container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 10px 10px 50px ;
+
+}
+.output{
+    width: 250px;
+    height: 40px;
+    text-align: end;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:ivory ;
+}
+.all-btn{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    
+}
+.all-btn button{
+    width: 50px;
+    height:50px;
+    margin: 5px;
+    border-radius: 15px;
+}
+#eql{
+    grid-column:span 2;
+    width: 110px;
+    background-color:orangered;
+    border-radius: 15px;
+}
+.ac-btn{
+    color:orangered;
+}

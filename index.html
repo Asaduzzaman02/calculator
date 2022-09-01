@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator-project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input id="result" class="output" type="text" placeholder="0" >
+        <br>  <br>
+        <div class="all-btn">
+            <button class="ac-btn" onclick="clrAll('ac')">AC</button>
+            <button class="ac-btn" onclick="Del('del')">Del</button>
+            <button class="ac-btn" onclick="numshow('%')"> %</button>
+            <button class="ac-btn" onclick="numshow('/')"> /</button>
+            <button onclick="numshow('7')"> 7</button>
+            <button onclick="numshow('8')"> 8</button>
+            <button onclick="numshow('9')"> 9</button>
+            <button class="ac-btn" onclick="numshow('*')"> * </button>
+            <button onclick="numshow('4')"> 4</button>
+            <button onclick="numshow('5')"> 5</button>
+            <button onclick="numshow('6')"> 6</button>
+            <button class="ac-btn" onclick="numshow('-')"> -</button>
+            <button onclick="numshow('1')"> 1</button>
+            <button onclick="numshow('2')"> 2</button>
+            <button onclick="numshow('3')"> 3</button>
+            <button class="ac-btn" onclick="numshow('+')"> +</button>
+            <button onclick="numshow('.')"> .</button>
+            <button onclick="numshow('0')"> 0</button>
+            <button id="eql" onclick="calculate('=')"> =</button>
+           
+        </div>
+
+    </div>
+  <script>
+    let result = document.getElementById("result");
+    function numshow (num){
+        result.value += num;
+
+
+    }
+    function clrAll(){
+        result.value = "";
+    }
+    function Del(){
+        result.value = result.value.slice(0,-1);
+    }
+    function calculate(){
+        let x = result.value;
+        let y = eval (x);
+        result.value = y ;
+    }
+     
+  </script>
+
+</body>
+</html>
